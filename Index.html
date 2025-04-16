@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>FCL - Faridabad Cable Connection</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="Housing Wires, Faridabad Cable Connection" name="keywords">
+
+    <meta content="Faridabad Cable Connection - High-quality housing wires" name="description">
+
+
+
+    <!-- Google Web Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+
+
+    <!-- Icon Font Stylesheet -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+    <!-- Libraries Stylesheet -->
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+
+    <link href="bootstrap.min2.css" rel="stylesheet">
+
+
+
+    <!-- Template Stylesheet -->
+
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+
+
+    <style>
+
+        .header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+			font-weight: 700;
+
+        }
+
+        
+
+        .logo {
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+        }
+
+        
+
+        .logo span {
+
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: normal;
+
+        }
+
+        
+
+        /* Main Navigation */
+
+        nav {
+
+            position: relative;
+
+        }
+
+        
+
+        .nav-menu {
+
+            list-style: none;
+
+            display: flex;
+
+        }
+
+        
+
+        .nav-menu li {
+
+            position: relative;
+
+        }
+
+        
+
+        .nav-menu li a {
+
+            display: block;
+
+            padding: 15px 20px;
+
+            color:black;
+
+            text-decoration: none;
+
+            transition: all 0.3s;
+
+        }
+
+        
+
+        .nav-menu li a:hover {
+
+            background-color: #e0e0e0;
+
+        }
+
+		
+
+
+
+         .nav-menu li a:hover {
+
+            background-color: #e0e0e0;
+
+        }       
+
+        /* Submenu Styles */
+
+        .submenu {
+
+            position: absolute;
+
+            top: 100%;
+
+            left: 0;
+
+            background-color: white;
+
+            min-width: 200px;
+
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: all 0.3s;
+
+            z-index: 100;
+
+			list-style:none;
+
+			padding:0px;
+
+        }
+
+        
+
+        .nav-menu li:hover .submenu {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+		
+
+        .nav-menu li a:hover{
+
+			color:#ffc107;
+
+			background:none;
+
+		}
+
+		
+
+        .submenu li {
+
+            width: 100%;
+
+        }
+
+        
+
+        /* Mobile Styles */
+
+        .menu-toggle {
+
+            display: none;
+
+            cursor: pointer;
+
+            font-size: 24px;
+
+            padding: 10px;
+
+        }
+
+        
+
+        /* Mobile Menu (off-canvas) */
+
+        .mobile-nav {
+
+            position: fixed;
+
+            top: 0;
+
+            right: -100%;
+
+            width: 80%;
+
+            max-width: 300px;
+
+            height: 100vh;
+
+            background-color: #533dea;
+
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+
+            transition: right 0.3s ease;
+
+            z-index: 1000;
+
+            padding-top: 60px;
+
+            overflow-y: auto;
+
+        }
+
+        
+
+        .mobile-nav.active {
+
+            right: 0;
+
+        }
+
+        
+
+        .mobile-nav .nav-menu {
+
+            flex-direction: column;
+
+        }
+
+        
+
+        .mobile-nav .submenu {
+
+            position: static;
+
+            opacity: 1;
+
+            visibility: visible;
+
+            display: none;
+
+            box-shadow: none;
+
+            padding-left: 20px;
+
+        }
+
+        
+
+        .mobile-nav .submenu.active {
+
+            display: block;
+
+			    background: #533dea;
+
+        }
+
+        
+
+        .mobile-nav .has-submenu > a::after {
+
+            content: '+';
+
+            float: right;
+
+        }
+
+        
+
+        .mobile-nav .has-submenu.active > a::after {
+
+            content: '-';
+
+        }
+
+        
+
+        .overlay {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-color: rgba(0,0,0,0.5);
+
+            z-index: 999;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: all 0.3s;
+
+        }
+
+        
+
+        .overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+        
+
+        .close-btn {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 15px;
+
+            font-size: 24px;
+
+            cursor: pointer;
+
+        }
+
+        
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+
+            .menu-toggle {
+
+                display: block;
+
+            }
+
+            
+
+            .desktop-nav {
+
+                display: none;
+
+            }
+
+		 .nav-menu li a:hover {
+
+            color:yellow;
+
+        }
+
+		 .nav-menu li a {
+
+			color:white;
+
+		}
+
+        }
+
+    </style>
+
+<body>
+
+    <!-- Topbar Start -->
+
+    <div class="container-fluid topbar-top bg-primary">
+
+        <div class="container">
+
+            <div class="d-flex justify-content-between topbar py-2">
+
+                <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+
+                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fas fa-map-marker-alt me-2" style="color:#ffc107"></i>Faridabad, India</a>
+
+                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fas fa-phone-alt me-2" style="color:#ffc107"></i>+91 9876543210</a>
+
+                    <a href="#"  style="color: white;text-decoration: wavy;"><i class="fas fa-envelope me-2" style="color:#ffc107"></i>director@toolwithtricks.com</a>
+
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center topbar-icon">
+
+                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-facebook-f" style="color:white"></i></a>
+
+                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-youtube" style="color:white"></i></a>
+
+                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-instagram" style="color:white"></i></a>
+
+                    <a href="#" class=""><i class="fab fa-linkedin-in" style="color:white"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Topbar End -->
+
+    <div class="header">
+
+        <div class="logo">
+
+            <img src="logo.png" style="width: 101px;padding: 0px 0px 0px 11px;"/>
+
+        </div>
+
+        
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        
+
+        <nav class="desktop-nav">
+
+            <ul class="nav-menu">
+
+                <li><a href="#" style="color:#ffc107">Home</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li class="has-submenu">
+
+                    <a href="#">Products<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+
+                    <ul class="submenu">
+
+                        <li><a href="#">Engineering</a></li>
+
+                        <li><a href="#">Business Optimization</a></li>
+
+                        <li><a href="#">Company</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li><a href="#">What's New</a></li>
+
+                <li><a href="#">Download</a></li>
+
+                <li class="has-submenu">
+
+                    <a href="#">Resources<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+
+                    <ul class="submenu">
+
+                        <li><a href="#">Engineering</a></li>
+
+                        <li><a href="#">Business Optimization</a></li>
+
+                        <li><a href="#">Company</a></li>
+
+                    </ul>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+    
+
+				
+
+    <!-- Mobile Navigation -->
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <span class="close-btn" id="closeBtn">×</span>
+
+        <ul class="nav-menu">
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">Product</a></li>
+
+            <li class="has-submenu">
+
+                <a href="#">About</a>
+
+                <ul class="submenu">
+
+                    <li><a href="#">MD Message</a></li>
+
+                    <li><a href="#">History</a></li>
+
+                </ul>
+
+            </li>
+
+            <li><a href="#">What's New</a></li>
+
+            <li><a href="#">Download</a></li>
+
+            <li><a href="#">Dealer Locator</a></li>
+
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+    
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const menuToggle = document.getElementById('menuToggle');
+
+            const closeBtn = document.getElementById('closeBtn');
+
+            const mobileNav = document.getElementById('mobileNav');
+
+            const overlay = document.getElementById('overlay');
+
+            
+
+            // Toggle mobile menu
+
+            menuToggle.addEventListener('click', function() {
+
+                mobileNav.classList.add('active');
+
+                overlay.classList.add('active');
+
+                document.body.style.overflow = 'hidden';
+
+            });
+
+            
+
+            // Close mobile menu
+
+            function closeMenu() {
+
+                mobileNav.classList.remove('active');
+
+                overlay.classList.remove('active');
+
+                document.body.style.overflow = '';
+
+            }
+
+            
+
+            closeBtn.addEventListener('click', closeMenu);
+
+            overlay.addEventListener('click', closeMenu);
+
+            
+
+            // Toggle submenus on mobile
+
+            const hasSubmenu = document.querySelectorAll('.mobile-nav .has-submenu');
+
+            
+
+            hasSubmenu.forEach(item => {
+
+                const link = item.querySelector('a');
+
+                const submenu = item.querySelector('.submenu');
+
+                
+
+                link.addEventListener('click', function(e) {
+
+                    e.preventDefault();
+
+                    item.classList.toggle('active');
+
+                    submenu.classList.toggle('active');
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+<!-- Slider Start -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+    <ol class="carousel-indicators">
+
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+
+    </ol>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <img class="d-block w-100" id="slidsa" src="slidsa.png" alt="First slide">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img class="d-block w-100" id="slide2" src="slid22.png" alt="Second slide">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img class="d-block w-100" id="slide3" src="slid33.png" alt="Third slide">
+
+        </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Previous</span>
+
+    </a>
+
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Next</span>
+
+    </a>
+
+</div>
+
+<!-- Slider End -->
+
+
+
+<!-- JavaScript to swap images based on screen width -->
+
+<script>
+
+    function updateCarouselImages() {
+
+        let slide1 = document.getElementById('slide1');
+
+        let slide2 = document.getElementById('slide2');
+
+        let slide3 = document.getElementById('slide3');
+
+
+
+        if (window.innerWidth < 500) {
+
+            slide1.src = 'small_slid1.png'; // Smaller screen images
+
+            slide2.src = 'small_slid2.png';
+
+            slide3.src = 'small_slid3.png';
+
+        } else {
+
+            slide1.src = 'slid1.png'; // Default larger screen images
+
+            slide2.src = 'slid2.png';
+
+            slide3.src = 'slid3.png';
+
+        }
+
+    }
+
+
+
+    // Initial check and on resize event
+
+    window.onload = updateCarouselImages;
+
+    window.onresize = updateCarouselImages;
+
+</script>
+
+
+
+    <!-- Products Start -->
+
+    <div id="products" class="container-fluid py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-4">
+
+                <p><span style="font-weight:bold;">NEW!</span>
+
+Now manage your Hilti tools or book tool's repair online
+
+</p>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="card h-100" style="border-radius: 0px;border: none;">
+
+                        <img class="card-img-top" src="image1.jpeg" alt="Product 1" style="border-bottom: none;border-radius: 0px;">
+
+                        <div class="card-body">
+
+                            <h5 class="card-titles">Tool Tips Type 1</h5>
+
+                            <p class="card-text">Description of Tool Tips Type 1.</p>
+
+							  <p>
+
+								<a href="#" class="find-out">
+
+								  know more  <span class="arrow">›</span>
+
+								</a>
+
+							  </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="card h-100" style="border-radius: 0px;border: none;">
+
+                        <img class="card-img-top" src="image2.jpg" alt="Product 2" style="border-bottom: none;border-radius: 0px;">
+
+                        <div class="card-body">
+
+                            <h5 class="card-titles">Tool Tips Type 2</h5>
+
+                            <p class="card-text">Description of Tool Tips Type 2.</p>
+
+							  <p>
+
+								<a href="#" class="find-out">
+
+								  know more  <span class="arrow">›</span>
+
+								</a>
+
+							  </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="card h-100" style="border-radius: 0px;border: none;">
+
+                        <img class="card-img-top" src="imag3.jpg" alt="Product 3" style="border-bottom: none;border-radius: 0px;">
+
+                        <div class="card-body">
+
+                            <h5 class="card-titles">Tool Tips Type 3</h5>
+
+                            <p class="card-text">Description of Tool Tips Type 3.</p>
+
+							  <p>
+
+								<a href="#" class="find-out">
+
+								  know more  <span class="arrow">›</span>
+
+								</a>
+
+							  </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Products End -->
+
+  <style>
+
+    .features {
+
+	display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 31px;
+
+    justify-content: center;
+
+    padding: 36px;
+
+    }
+
+
+
+    .feature {
+
+      flex: 1 1 200px;
+
+      max-width: 220px;
+
+      text-align: left;
+
+    }
+
+
+
+    .feature-icon {
+
+      width: 40px;
+
+      height: 40px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+
+    .feature-title {
+
+      color: #e6d011;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      text-transform: uppercase;
+
+      margin-bottom: 5px;
+
+    }
+
+
+
+    .feature-text {
+
+      color: #333;
+
+    }
+
+
+
+    .feature-text .arrow {
+
+      color: #533dea;
+
+      margin-left: 5px;
+
+      transition: color 0.3s ease;
+
+    }
+
+
+
+    .feature-text:hover .arrow {
+
+      color: #f4d03f; /* yellow hover */
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+      .features {
+
+        justify-content: center;
+
+      }
+
+
+
+      .feature {
+
+        max-width: 100%;
+
+        text-align: center;
+
+      }
+
+
+
+      .feature-icon {
+
+        margin: 0 auto 10px;
+
+      }
+
+    }
+
+  </style><br>
+
+  <div class="features">
+
+    <!-- Feature 1 -->
+
+    <div class="feature">
+
+      <img src="cure.png" alt="Experience Icon" class="feature-icon">
+
+      <div class="feature-title">Industry Experience</div>
+
+      <p class="feature-text">
+
+        80 years of industry knowledge <span class="arrow">›</span>
+
+      </p>
+
+    </div>
+
+
+
+    <!-- Feature 2 -->
+
+    <div class="feature">
+
+      <img src="cure.png" alt="Sustainability Icon" class="feature-icon">
+
+      <div class="feature-title">Sustainability</div>
+
+      <p class="feature-text">
+
+        Committed to a greener industry <span class="arrow">›</span>
+
+      </p>
+
+    </div>
+
+
+
+    <!-- Feature 3 -->
+
+    <div class="feature">
+
+      <img src="safe.png" alt="Productivity Icon" class="feature-icon">
+
+      <div class="feature-title">Productivity</div>
+
+      <p class="feature-text">
+
+        Faster projects through innovation <span class="arrow">›</span>
+
+      </p>
+
+    </div>
+
+
+
+    <!-- Feature 4 -->
+
+    <div class="feature">
+
+      <img src="fast.png" alt="Safety Icon" class="feature-icon">
+
+      <div class="feature-title">Safety</div>
+
+      <p class="feature-text">
+
+        Solutions for safer jobsite and buildings <span class="arrow">›</span>
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+    <!-- About Us Start -->
+
+    <div id="about" class="container-fluid py-5" style="background: #1158e6;color: white;">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <h2 class="mb-4">About Tool with Tricks</h2>
+
+                    <p> Tool with Tricks was founded and is based in Schaan, Liechtenstein. Our team members around the world contribute to making construction work more productive, safer, and more sustainable. We do this with our hardware, software and service offering.</p>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <img src="logo.png" class="img-fluid abot" alt="About FCC">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- About Us End -->
+
+<style>
+
+ .abot{width: 350px;display: block;margin: auto;}
+
+ 
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+
+		.abot{width: 215px;display: block;margin: auto;margin-top:20px;}
+
+        }    
+
+</style>
+
+    <!-- Products Start -->
+
+    <div id="products" class="container-fluid py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-4">
+
+                <h2>Our Products</h2>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="card h-100" style="border-radius: 0px;border: none;">
+
+                        <img class="card-img-top" src="image1.jpeg" alt="Product 1" style="border-bottom: none;border-radius: 0px;">
+
+                        <div class="card-body">
+
+                            <h5 class="card-titles">Tool Tips Type 1</h5>
+
+                            <p class="card-text">Description of Tool Tips Type 1.</p>
+
+							  <p>
+
+								<a href="#" class="find-out">
+
+								  know more  <span class="arrow">›</span>
+
+							
