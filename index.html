@@ -129,7 +129,7 @@
         
 
         .nav-menu li a {
-
+			border-bottom: ridge;
             display: block;
 
             padding: 15px 20px;
@@ -381,7 +381,10 @@
         }
 
         
-
+		.trail{
+			display:none
+		}
+	
         /* Responsive Design */
 
         @media (max-width: 768px) {
@@ -411,7 +414,21 @@
 			color:white;
 
 		}
-
+	        
+		.trail{
+			display:block;
+			background: #FFC107;
+			border-radius: 0px;
+			color: white;
+			margin-left: 179px;
+		}
+		.trail:hover{
+			display:block;
+			background: #FFC107;
+			border-radius: 0px;
+			color: black;
+			margin-left: 179px;
+		}		
         }
 
     </style>
@@ -457,22 +474,15 @@
     <!-- Topbar End -->
 
     <div class="header">
-
         <div class="logo">
-
             <img src="logo.png" style="width: 101px;padding: 0px 0px 0px 11px;"/>
-
         </div>
-
-        
-
+        <a href="#">
+			<button class="btn trail">15 day Trail</button>
+		</a>
         <div class="menu-toggle" id="menuToggle">☰</div>
-
-        
-
         <nav class="desktop-nav">
-
-            <ul class="nav-menu">
+            <ul class="nav-menu" style="margin-bottom: 0rem;">
                 <li class="has-submenu">
                     <a href="#">Steel<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
                     <ul class="submenu">
@@ -527,6 +537,8 @@
                     </ul>
                 </li>
                 <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+				
+                <li><a href="#"><button class="btn" style="background: #FFC107;border-radius: 0px;color: white;">15 day Trail</button></a></li>
             </ul>
 
         </nav>
