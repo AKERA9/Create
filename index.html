@@ -1,700 +1,784 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
-<head>
-
-    <meta charset="utf-8">
-
-    <title>FCL - Faridabad Cable Connection</title>
-
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <meta content="Housing Wires, Faridabad Cable Connection" name="keywords">
-
-    <meta content="Faridabad Cable Connection - High-quality housing wires" name="description">
-
-
-
-    <!-- Google Web Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> 
-	
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-
-
-
-    <!-- Icon Font Stylesheet -->
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-
-
-    <!-- Libraries Stylesheet -->
-
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-
-
-    <!-- Customized Bootstrap Stylesheet -->
-
-    <link href="bootstrap.min2.css" rel="stylesheet">
-
-
-
-    <!-- Template Stylesheet -->
-
-    <link href="style.css" rel="stylesheet">
-
-</head>
-
-
-
-    <style>
-
-        .header {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-			font-weight: 700;
-
-        }
-
-        
-
-        .logo {
-
-            font-size: 24px;
-
-            font-weight: bold;
-
-        }
-
-        
-
-        .logo span {
-
-            display: block;
-
-            font-size: 14px;
-
-            font-weight: normal;
-
-        }
-
-        
-
-        /* Main Navigation */
-
-        nav {
-
-            position: relative;
-
-        }
-
-        
-
-        .nav-menu {
-
-            list-style: none;
-
-            display: flex;
-
-        }
-
-        
-
-        .nav-menu li {
-
-            position: relative;
-
-        }
-
-        
-
-        .nav-menu li a {
-			border-bottom: ridge;
-            display: block;
-
-            padding: 15px 20px;
-
-            color:black;
-
-            text-decoration: none;
-
-            transition: all 0.3s;
-
-        }
-
-        
-
-        .nav-menu li a:hover {
-
-            background-color: #e0e0e0;
-
-        }
-
-		
-
-
-
-         .nav-menu li a:hover {
-
-            background-color: #e0e0e0;
-
-        }       
-
-        /* Submenu Styles */
-
-        .submenu {
-
-            position: absolute;
-
-            top: 100%;
-
-            left: 0;
-
-            background-color: white;
-
-            min-width: 200px;
-
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-            opacity: 0;
-
-            visibility: hidden;
-
-            transition: all 0.3s;
-
-            z-index: 100;
-
-			list-style:none;
-
-			padding:0px;
-
-        }
-
-        
-
-        .nav-menu li:hover .submenu {
-
-            opacity: 1;
-
-            visibility: visible;
-
-        }
-
-		
-
-        .nav-menu li a:hover{
-
-			color:#ffc107;
-
-			background:none;
-
-		}
-
-		
-
-        .submenu li {
-
-            width: 100%;
-
-        }
-
-        
-
-        /* Mobile Styles */
-
-        .menu-toggle {
-
-            display: none;
-
-            cursor: pointer;
-
-            font-size: 24px;
-
-            padding: 10px;
-
-        }
-
-        
-
-        /* Mobile Menu (off-canvas) */
-
-        .mobile-nav {
-
-            position: fixed;
-
-            top: 0;
-
-            right: -100%;
-
-            width: 80%;
-
-            max-width: 300px;
-
-            height: 100vh;
-
-            background-color: #533dea;
-
-            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-
-            transition: right 0.3s ease;
-
-            z-index: 1000;
-
-            padding-top: 60px;
-
-            overflow-y: auto;
-
-        }
-
-        
-
-        .mobile-nav.active {
-
-            right: 0;
-
-        }
-
-        
-
-        .mobile-nav .nav-menu {
-
-            flex-direction: column;
-
-        }
-
-        
-
-        .mobile-nav .submenu {
-
-            position: static;
-
-            opacity: 1;
-
-            visibility: visible;
-
-            display: none;
-
-            box-shadow: none;
-
-            padding-left: 20px;
-
-        }
-
-        
-
-        .mobile-nav .submenu.active {
-
-            display: block;
-
-			    background: #533dea;
-
-        }
-
-        
-
-        .mobile-nav .has-submenu > a::after {
-
-            content: '+';
-
-            float: right;
-
-        }
-
-        
-
-        .mobile-nav .has-submenu.active > a::after {
-
-            content: '-';
-
-        }
-
-        
-
-        .overlay {
-
-            position: fixed;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            height: 100%;
-
-            background-color: rgba(0,0,0,0.5);
-
-            z-index: 999;
-
-            opacity: 0;
-
-            visibility: hidden;
-
-            transition: all 0.3s;
-
-        }
-
-        
-
-        .overlay.active {
-
-            opacity: 1;
-
-            visibility: visible;
-
-        }
-
-        
-
-        .close-btn {
-
-            position: absolute;
-
-            top: 15px;
-
-            right: 15px;
-
-            font-size: 24px;
-
-            cursor: pointer;
-
-        }
-
-        
-		.trail{
-			display:none
-		}
-	
-        /* Responsive Design */
-
-        @media (max-width: 768px) {
-
-            .menu-toggle {
-
-                display: block;
-
-            }
-
-            
-
-            .desktop-nav {
-
-                display: none;
-
-            }
-
-		 .nav-menu li a:hover {
-
-            color:yellow;
-
-        }
-
-		 .nav-menu li a {
-
-			color:white;
-
-		}
-	        
-		.trail{
-			display:block;
-			background: #FFC107;
-			border-radius: 0px;
-			color: white;
-			margin-left: 55px;
-		}
-		.trail:hover{
-			display:block;
-			background: #FFC107;
-			border-radius: 0px;
-			color: black;
-			margin-left: 55px;
-		}		
-        }
-
-    </style>
-
-<body>
-
-    <!-- Topbar Start -->
-
-    <div class="container-fluid topbar-top bg-primary">
-
-        <div class="container">
-
+   <head>
+      <meta charset="utf-8">
+      <title>Tools with trick</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="Housing Wires, Faridabad Cable Connection" name="keywords">
+      <meta content="Faridabad Cable Connection - High-quality housing wires" name="description">
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+      <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+      <!-- Libraries Stylesheet -->
+      <link href="lib/animate/animate.min.css" rel="stylesheet">
+      <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <!-- Customized Bootstrap Stylesheet -->
+      <link href="bootstrap.min2.css" rel="stylesheet">
+      <!-- Template Stylesheet -->
+      <link href="style.css" rel="stylesheet">
+   </head>
+   <style>
+      .header {
+      display: flex;
+	  padding-bottom: 10px;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      }
+      .logo {
+      font-size: 24px;
+      font-weight: bold;
+      }
+      .logo span {
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+      }
+      /* Main Navigation */
+      nav {
+      position: relative;
+      }
+      .nav-menu {
+      list-style: none;
+      display: flex;
+      }
+      .nav-menu li {
+      position: relative;
+      }
+      .nav-menu li a {
+      border-bottom: ridge;
+      display: block;
+      padding: 15px 20px;
+      color:black;
+      text-decoration: none;
+      transition: all 0.3s;
+      }
+      .nav-menu li a:hover {
+      background-color: #e0e0e0;
+      }
+      .nav-menu li a:hover {
+      background-color: #e0e0e0;
+      }       
+      /* Submenu Styles */
+      .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 100;
+      list-style:none;
+      padding:0px;
+      }
+      .nav-menu li:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      }
+      .nav-menu li a:hover{
+      color:#ffc107;
+      background:none;
+      }
+      .submenu li {
+      width: 100%;
+      }
+      /* Mobile Styles */
+      .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      padding: 10px;
+      }
+      /* Mobile Menu (off-canvas) */
+      .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: #533dea;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      padding-top: 60px;
+      overflow-y: auto;
+      }
+      .mobile-nav.active {
+      right: 0;
+      }
+      .mobile-nav .nav-menu {
+      flex-direction: column;
+      }
+      .mobile-nav .submenu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      display: none;
+      box-shadow: none;
+      padding-left: 20px;
+      }
+      .mobile-nav .submenu.active {
+      display: block;
+      background: #533dea;
+      }
+      .mobile-nav .has-submenu > a::after {
+      content: '+';
+      float: right;
+      }
+      .mobile-nav .has-submenu.active > a::after {
+      content: '-';
+      }
+      .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      }
+      .overlay.active {
+      opacity: 1;
+      visibility: visible;
+      }
+      .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      }
+      .trail{
+      display:none
+      }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+      .menu-toggle {
+      display: block;
+      }
+      .desktop-nav {
+      display: none;
+      }
+      .nav-menu li a:hover {
+      color:yellow;
+      }
+      .nav-menu li a {
+      color:white;
+      }
+      .trail{
+      display:block;
+      background: #FFC107;
+      border-radius: 0px;
+      color: white;
+      margin-left: 55px;
+      }
+      .trail:hover{
+      display:block;
+      background: #FFC107;
+      border-radius: 0px;
+      color: black;
+      margin-left: 55px;
+      }		
+      }
+   </style>
+   <body>
+      <!-- Topbar Start -->
+      <div class="container-fluid" STYLE="background-color: #1158e6">
+         <div class="container">
             <div class="d-flex justify-content-between topbar py-2">
-
-                <div class="d-flex align-items-center flex-shrink-0 topbar-info">
-
-                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fas fa-map-marker-alt me-2" style="color:#ffc107"></i>Faridabad, India</a>
-
-                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fas fa-phone-alt me-2" style="color:#ffc107"></i>+91 9876543210</a>
-
-                    <a href="#"  style="color: white;text-decoration: wavy;"><i class="fas fa-envelope me-2" style="color:#ffc107"></i>director@toolwithtricks.com</a>
-
-                </div>
-
-                <div class="d-flex align-items-center justify-content-center topbar-icon">
-
-                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-facebook-f" style="color:white"></i></a>
-
-                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-youtube" style="color:white"></i></a>
-
-                    <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-instagram" style="color:white"></i></a>
-
-                    <a href="#" class=""><i class="fab fa-linkedin-in" style="color:white"></i></a>
-
-                </div>
-
+               <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+                  <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fas fa-map-marker-alt me-2" style="color:#ffc107"></i>Faridabad, India</a>
+                  <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fas fa-phone-alt me-2" style="color:#ffc107"></i>+91 9876543210</a>
+                  <a href="#"  style="color: white;text-decoration: wavy;"><i class="fas fa-envelope me-2" style="color:#ffc107"></i>director@toolwithtricks.com</a>
+               </div>
+               <div class="d-flex align-items-center justify-content-center topbar-icon">
+                  <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-facebook-f" style="color:white"></i></a>
+                  <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-youtube" style="color:white"></i></a>
+                  <a href="#" class="me-4" style="color: white;text-decoration: wavy;"><i class="fab fa-instagram" style="color:white"></i></a>
+                  <a href="#" class=""><i class="fab fa-linkedin-in" style="color:white"></i></a>
+               </div>
             </div>
-
-        </div>
-
-    </div>
-
-    <!-- Topbar End -->
-
-    <div class="header">
-        <div class="logo">
+         </div>
+      </div>
+      <!-- Topbar End -->
+      <div class="header">
+         <div class="logo">
             <img src="logo.png" style="width: 101px;padding: 0px 0px 0px 11px;"/>
-        </div>
-        <a href="#">
-			<button class="btn trail">15 day Trail</button>
-		</a>
-        <div class="menu-toggle" id="menuToggle">☰</div>
-        <nav class="desktop-nav">
-            <ul class="nav-menu" style="margin-bottom: 0rem;">
-                <li class="has-submenu">
-                    <a href="#">Steel<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
-                    <ul class="submenu">
-                        <li><a href="#">Connection design</a></li>
-                        <li><a href="#">Connection Library</a></li>
-                        <li><a href="#">Member design</a></li>
-                        <li><a href="#">Steel workflows</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Concrete<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
-                    <ul class="submenu">
-                        <li><a href="#">Wall & detail design</a></li>
-                        <li><a href="#">Cross-section design</a></li>
-                        <li><a href="#">Member design</a></li>
-                        <li><a href="#">Concrete workflows</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">BIM<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
-                    <ul class="submenu">
-                        <li><a href="#">Supported integrations</a></li>
-                        <li><a href="#">Checkbot</a></li>
-                        <li><a href="#">Viewer</a></li>
-                        <li><a href="#">Parametric design</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Support & Learning<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
-                    <ul class="submenu">
-                        <li><a href="#">Support Center</a></li>
-                        <li><a href="#">E-learning & Certification</a></li>
-                        <li><a href="#">In-person training</a></li>
-                        <li><a href="#">Downloads & Licensing</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Pricing<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
-                    <ul class="submenu">
-                        <li><a href="#">Standard users</a></li>
-                        <li><a href="#">Enterprise customers</a></li>
-                        <li><a href="#">Students & Educators</a></li>
-                        <li><a href="#">Meet our customers</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Company<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
-                    <ul class="submenu">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Research & development</a></li>
-                        <li><a href="#">Authorized resellers</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-				
-                <li><a href="#"><button class="btn" style="background: #FFC107;border-radius: 0px;color: white;">15 day Trail</button></a></li>
-            </ul>
+         </div>
+<style>
+  /* Search Styles */
+  .search-container {
+    position: relative;
+    display: inline-block;
+	margin-top:8px;
+  }
+  
+  .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    padding: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .search-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .search-input-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 55vw;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    overflow: hidden;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    margin-top: 5px;
+  }
+  
+  .search-input-container.active {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+  .search-input {
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-results {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .search-result-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .search-highlight {
+    background-color: rgba(255, 235, 59, 0.3);
+    transition: background-color 1.5s ease;
+    animation: highlightPulse 1.5s;
+  }
 
-        </nav>
+  @keyframes highlightPulse {
+    0% { background-color: rgba(255, 235, 59, 0.3); }
+    50% { background-color: rgba(255, 235, 59, 0.7); }
+    100% { background-color: rgba(255, 235, 59, 0.3); }
+  }
 
-    </div>
+  /* Mobile header buttons */
+  .menu-toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
 
-    
+  .mobile-header-search, 
+  .mobile-header-user {
+      color: black;
+      font-size: 18px;
+      display: none;
+  }
 
-				
+  @media (max-width: 768px) {
+      .mobile-header-search, 
+      .mobile-header-user {
+          display: block;
+      }
+      
+      .menu-toggle {
+          order: 1; /* Keep menu toggle last */
+      }
+  }
+  /* Mobile Search Styles */
+  .mobile-search {
+      padding: 15px;
+      width: 100%;
+      box-sizing: border-box;
+  }
 
-    <!-- Mobile Navigation -->
+  .mobile-search .search-btn {
+      width: 100%;
+      text-align: left;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      color: white;
+      background: rgba(255,255,255,0.2);
+  }
 
-    <div class="overlay" id="overlay"></div>
+  .mobile-search .search-btn i {
+      margin-right: 10px;
+  }
 
-    <div class="mobile-nav" id="mobileNav">
+  .mobile-search .search-input-container {
+      position: relative;
+      width: 100%;
+      box-shadow: none;
+      margin-top: 10px;
+      left: 0;
+  }
 
-        <span class="close-btn" id="closeBtn">×</span>
+  .mobile-search .search-input {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+  }
 
-            <ul class="nav-menu">
-                <li class="has-submenu">
-                    <a href="#">Steel</a>
-                    <ul class="submenu">
-                        <li><a href="#">Connection design</a></li>
-                        <li><a href="#">Connection Library</a></li>
-                        <li><a href="#">Member design</a></li>
-                        <li><a href="#">Steel workflows</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Concrete</a>
-                    <ul class="submenu">
-                        <li><a href="#">Wall & detail design</a></li>
-                        <li><a href="#">Cross-section design</a></li>
-                        <li><a href="#">Member design</a></li>
-                        <li><a href="#">Concrete workflows</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">BIM</a>
-                    <ul class="submenu">
-                        <li><a href="#">Supported integrations</a></li>
-                        <li><a href="#">Checkbot</a></li>
-                        <li><a href="#">Viewer</a></li>
-                        <li><a href="#">Parametric design</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Support & Learning</a>
-                    <ul class="submenu">
-                        <li><a href="#">Support Center</a></li>
-                        <li><a href="#">E-learning & Certification</a></li>
-                        <li><a href="#">In-person training</a></li>
-                        <li><a href="#">Downloads & Licensing</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Pricing</a>
-                    <ul class="submenu">
-                        <li><a href="#">Standard users</a></li>
-                        <li><a href="#">Enterprise customers</a></li>
-                        <li><a href="#">Students & Educators</a></li>
-                        <li><a href="#">Meet our customers</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Company</a>
-                    <ul class="submenu">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Research & development</a></li>
-                        <li><a href="#">Authorized resellers</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-            </ul>
+  .mobile-user-icon {
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 20px;
+  }
 
-    </div>
+  .mobile-user-icon a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+  }
 
-    
+  .mobile-user-icon i {
+      margin-right: 8px;
+  }
+</style>
 
-    <script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Desktop search functionality
+  const desktopSearchBtn = document.querySelector('.desktop-nav .search-btn');
+  const desktopSearchInputContainer = document.querySelector('.desktop-nav .search-input-container');
+  const desktopSearchInput = document.querySelector('.desktop-nav .search-input');
+  const desktopSearchResults = document.querySelector('.desktop-nav .search-results');
+  
+  // Mobile search functionality
+  const mobileSearchBtn = document.querySelector('.mobile-search .search-btn');
+  const mobileSearchInputContainer = document.querySelector('.mobile-search .search-input-container');
+  const mobileSearchInput = document.querySelector('.mobile-search .search-input');
+  const mobileSearchResults = document.querySelector('.mobile-search .search-results');
+  
+  // Header mobile search button
+  const headerMobileSearchBtn = document.querySelector('.mobile-header-search');
+  
+  // Toggle desktop search with animation
+  if(desktopSearchBtn) {
+    desktopSearchBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isActive = desktopSearchInputContainer.classList.contains('active');
+      
+      if (isActive) {
+        desktopSearchInputContainer.classList.remove('active');
+        desktopSearchInput.blur();
+      } else {
+        desktopSearchInputContainer.classList.add('active');
+        desktopSearchInput.focus();
+      }
+    });
+  }
+  
+  // Toggle mobile search with animation
+  if(mobileSearchBtn) {
+    mobileSearchBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isActive = mobileSearchInputContainer.classList.contains('active');
+      
+      if (isActive) {
+        mobileSearchInputContainer.classList.remove('active');
+        mobileSearchInput.blur();
+      } else {
+        mobileSearchInputContainer.classList.add('active');
+        mobileSearchInput.focus();
+      }
+    });
+  }
+  
+  // Toggle mobile search from header button
+  if(headerMobileSearchBtn) {
+    headerMobileSearchBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('mobileNav').classList.add('active');
+      document.getElementById('overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Focus on mobile search
+      setTimeout(() => {
+        mobileSearchInputContainer.classList.add('active');
+        mobileSearchInput.focus();
+      }, 300);
+    });
+  }
 
-        document.addEventListener('DOMContentLoaded', function() {
+  // Common search functionality
+  function setupSearch(inputElement, resultsContainer) {
+    inputElement.addEventListener('input', function() {
+      const searchTerm = this.value.trim().toLowerCase();
+      resultsContainer.innerHTML = '';
+      
+      if (searchTerm.length < 2) {
+        return;
+      }
 
-            const menuToggle = document.getElementById('menuToggle');
+      // Find all text nodes in the document
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
 
-            const closeBtn = document.getElementById('closeBtn');
-
-            const mobileNav = document.getElementById('mobileNav');
-
-            const overlay = document.getElementById('overlay');
-
-            
-
-            // Toggle mobile menu
-
-            menuToggle.addEventListener('click', function() {
-
-                mobileNav.classList.add('active');
-
-                overlay.classList.add('active');
-
-                document.body.style.overflow = 'hidden';
-
+      const results = [];
+      let node;
+      
+      while (node = walker.nextNode()) {
+        if (node.nodeValue.toLowerCase().includes(searchTerm)) {
+          const parentElement = node.parentElement;
+          
+          if (parentElement.offsetParent === null || 
+              parentElement.tagName === 'SCRIPT' || 
+              parentElement.tagName === 'STYLE') {
+            continue;
+          }
+          
+          let section = parentElement.closest('section, .section, [id], h1, h2, h3, h4, h5, h6');
+          if (!section) section = parentElement;
+          
+          if (!results.some(r => r.element === section)) {
+            results.push({
+              text: node.nodeValue.trim(),
+              element: section
             });
+          }
+        }
+      }
 
+      // Display results
+      if (results.length > 0) {
+        results.slice(0, 15).forEach(result => {
+          const resultItem = document.createElement('div');
+          resultItem.className = 'search-result-item';
+          
+          const text = result.text;
+          const index = text.toLowerCase().indexOf(searchTerm);
+          const start = Math.max(0, index - 30);
+          const end = Math.min(text.length, index + searchTerm.length + 30);
+          let preview = text.substring(start, end);
+          
+          if (start > 0) preview = '...' + preview;
+          if (end < text.length) preview = preview + '...';
+          
+          preview = preview.replace(
+            new RegExp(searchTerm, 'gi'), 
+            match => `<strong style="color:#ff6b00">${match}</strong>`
+          );
+          
+          resultItem.innerHTML = preview;
+          
+          resultItem.addEventListener('click', function() {
+            document.querySelectorAll('.search-highlight').forEach(hl => {
+              hl.classList.remove('search-highlight');
+            });
             
-
-            // Close mobile menu
-
-            function closeMenu() {
-
-                mobileNav.classList.remove('active');
-
-                overlay.classList.remove('active');
-
-                document.body.style.overflow = '';
-
+            // Smooth scroll to element
+            result.element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+            
+            // Highlight with animation
+            result.element.classList.add('search-highlight');
+            
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+              result.element.classList.remove('search-highlight');
+            }, 3000);
+            
+            // Close search
+            if(inputElement === desktopSearchInput) {
+              desktopSearchInputContainer.classList.remove('active');
+              desktopSearchInput.blur();
+            } else {
+              mobileSearchInputContainer.classList.remove('active');
+              mobileSearchInput.blur();
             }
-
-            
-
-            closeBtn.addEventListener('click', closeMenu);
-
-            overlay.addEventListener('click', closeMenu);
-
-            
-
-            // Toggle submenus on mobile
-
-            const hasSubmenu = document.querySelectorAll('.mobile-nav .has-submenu');
-
-            
-
-            hasSubmenu.forEach(item => {
-
-                const link = item.querySelector('a');
-
-                const submenu = item.querySelector('.submenu');
-
-                
-
-                link.addEventListener('click', function(e) {
-
-                    e.preventDefault();
-
-                    item.classList.toggle('active');
-
-                    submenu.classList.toggle('active');
-
-                });
-
-            });
-
+          });
+          
+          resultsContainer.appendChild(resultItem);
         });
+      } else {
+        resultsContainer.innerHTML = '<div class="search-result-item">No results found for "' + searchTerm + '"</div>';
+      }
+    });
+  }
 
-    </script>
+  // Initialize search for both desktop and mobile
+  if(desktopSearchInput) setupSearch(desktopSearchInput, desktopSearchResults);
+  if(mobileSearchInput) setupSearch(mobileSearchInput, mobileSearchResults);
+
+  // Close when clicking outside or pressing ESC
+  document.addEventListener('click', function(e) {
+    if (desktopSearchInputContainer && !desktopSearchInputContainer.contains(e.target) && 
+        (!desktopSearchBtn || !desktopSearchBtn.contains(e.target))) {
+      desktopSearchInputContainer.classList.remove('active');
+    }
+    
+    if (mobileSearchInputContainer && !mobileSearchInputContainer.contains(e.target) && 
+        (!mobileSearchBtn || !mobileSearchBtn.contains(e.target))) {
+      mobileSearchInputContainer.classList.remove('active');
+    }
+  });
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      if(desktopSearchInputContainer) desktopSearchInputContainer.classList.remove('active');
+      if(mobileSearchInputContainer) mobileSearchInputContainer.classList.remove('active');
+    }
+  });
+});
+</script>
+         <div class="menu-toggle-container">
+			<button class="search-btn mobile-header-search"><i class="fas fa-search"></i></button>
+			<a href="#" class="mobile-header-user"><i class="fa-solid fa-user"></i></a>
+			<div class="menu-toggle" id="menuToggle">☰</div>
+		</div>
+         <nav class="desktop-nav">
+            <ul class="nav-menu" style="margin-bottom: 0rem;">
+				<li>			   
+				<div class="search-container">
+				  <button class="search-btn"><i class="fas fa-search"></i></button>
+				  <div class="search-input-container">
+					<input type="text" class="search-input" placeholder="Search...">
+					<div class="search-results"></div>
+				  </div>
+				</div>
+				</li>
+               <li class="has-submenu">
+                  <a href="#">Steel<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+                  <ul class="submenu">
+                     <li><a href="#">Connection design</a></li>
+                     <li><a href="#">Connection Library</a></li>
+                     <li><a href="#">Member design</a></li>
+                     <li><a href="#">Steel workflows</a></li>
+                  </ul>
+               </li>
+               <li class="has-submenu">
+                  <a href="#">Concrete<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+                  <ul class="submenu">
+                     <li><a href="#">Wall & detail design</a></li>
+                     <li><a href="#">Cross-section design</a></li>
+                     <li><a href="#">Member design</a></li>
+                     <li><a href="#">Concrete workflows</a></li>
+                  </ul>
+               </li>
+               <li class="has-submenu">
+                  <a href="#">BIM<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+                  <ul class="submenu">
+                     <li><a href="#">Supported integrations</a></li>
+                     <li><a href="#">Checkbot</a></li>
+                     <li><a href="#">Viewer</a></li>
+                     <li><a href="#">Parametric design</a></li>
+                  </ul>
+               </li>
+               <li class="has-submenu">
+                  <a href="#">Support & Learning<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+                  <ul class="submenu">
+                     <li><a href="#">Support Center</a></li>
+                     <li><a href="#">E-learning & Certification</a></li>
+                     <li><a href="#">In-person training</a></li>
+                     <li><a href="#">Downloads & Licensing</a></li>
+                  </ul>
+               </li>
+               <li class="has-submenu">
+                  <a href="#">Pricing<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+                  <ul class="submenu">
+                     <li><a href="#">Standard users</a></li>
+                     <li><a href="#">Enterprise customers</a></li>
+                     <li><a href="#">Students & Educators</a></li>
+                     <li><a href="#">Meet our customers</a></li>
+                  </ul>
+               </li>
+               <li class="has-submenu">
+                  <a href="#">Company<img src="arrow.png" style="width: 22px;padding: 6px;"/></a>
+                  <ul class="submenu">
+                     <li><a href="#">Contact</a></li>
+                     <li><a href="#">Research & development</a></li>
+                     <li><a href="#">Authorized resellers</a></li>
+                  </ul>
+               </li>
+               <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+
+            </ul>
+         </nav>
+      </div>
+      <!-- Mobile Navigation -->
+      <div class="overlay" id="overlay"></div>
+      <div class="mobile-nav" id="mobileNav">
+         <span class="close-btn" id="closeBtn">×</span>
+		<!-- Add search container for mobile -->
+		<div class="search-container mobile-search">
+			<button class="search-btn"><i class="fas fa-search"></i> Search</button>
+			<div class="search-input-container">
+				<input type="text" class="search-input" placeholder="Search...">
+				<div class="search-results"></div>
+			</div>
+		</div>
+         <ul class="nav-menu">
+            <li class="has-submenu">
+               <a href="#">Steel</a>
+               <ul class="submenu">
+                  <li><a href="#">Connection design</a></li>
+                  <li><a href="#">Connection Library</a></li>
+                  <li><a href="#">Member design</a></li>
+                  <li><a href="#">Steel workflows</a></li>
+               </ul>
+            </li>
+            <li class="has-submenu">
+               <a href="#">Concrete</a>
+               <ul class="submenu">
+                  <li><a href="#">Wall & detail design</a></li>
+                  <li><a href="#">Cross-section design</a></li>
+                  <li><a href="#">Member design</a></li>
+                  <li><a href="#">Concrete workflows</a></li>
+               </ul>
+            </li>
+            <li class="has-submenu">
+               <a href="#">BIM</a>
+               <ul class="submenu">
+                  <li><a href="#">Supported integrations</a></li>
+                  <li><a href="#">Checkbot</a></li>
+                  <li><a href="#">Viewer</a></li>
+                  <li><a href="#">Parametric design</a></li>
+               </ul>
+            </li>
+            <li class="has-submenu">
+               <a href="#">Support & Learning</a>
+               <ul class="submenu">
+                  <li><a href="#">Support Center</a></li>
+                  <li><a href="#">E-learning & Certification</a></li>
+                  <li><a href="#">In-person training</a></li>
+                  <li><a href="#">Downloads & Licensing</a></li>
+               </ul>
+            </li>
+            <li class="has-submenu">
+               <a href="#">Pricing</a>
+               <ul class="submenu">
+                  <li><a href="#">Standard users</a></li>
+                  <li><a href="#">Enterprise customers</a></li>
+                  <li><a href="#">Students & Educators</a></li>
+                  <li><a href="#">Meet our customers</a></li>
+               </ul>
+            </li>
+            <li class="has-submenu">
+               <a href="#">Company</a>
+               <ul class="submenu">
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Research & development</a></li>
+                  <li><a href="#">Authorized resellers</a></li>
+               </ul>
+            </li>
+         </ul>
+		<!-- Add user icon at bottom -->
+		<div class="mobile-user-icon">
+			<a href="#"><i class="fa-solid fa-user"></i> Login</a>
+		</div>
+      </div>
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+         
+             const menuToggle = document.getElementById('menuToggle');
+         
+             const closeBtn = document.getElementById('closeBtn');
+         
+             const mobileNav = document.getElementById('mobileNav');
+         
+             const overlay = document.getElementById('overlay');
+         
+             // Toggle mobile menu
+         
+             menuToggle.addEventListener('click', function() {
+         
+                 mobileNav.classList.add('active');
+         
+                 overlay.classList.add('active');
+         
+                 document.body.style.overflow = 'hidden';
+         
+             });
+         
+             // Close mobile menu
+         
+             function closeMenu() {
+         
+                 mobileNav.classList.remove('active');
+         
+                 overlay.classList.remove('active');
+         
+                 document.body.style.overflow = '';
+         
+             }
+         
+             closeBtn.addEventListener('click', closeMenu);
+         
+             overlay.addEventListener('click', closeMenu);
+         
+             // Toggle submenus on mobile
+         
+             const hasSubmenu = document.querySelectorAll('.mobile-nav .has-submenu');
+         
+             hasSubmenu.forEach(item => {
+         
+                 const link = item.querySelector('a');
+         
+                 const submenu = item.querySelector('.submenu');
+         
+                 link.addEventListener('click', function(e) {
+         
+                     e.preventDefault();
+         
+                     item.classList.toggle('active');
+         
+                     submenu.classList.toggle('active');
+         
+                 });
+         
+             });
+         
+         });
+         
+      </script>
+<?php include 'menu.php'?>
 
 <!-- Slider Start -->
 
@@ -1099,7 +1183,24 @@ Now manage your Hilti tools or book tool's repair online
     </div>
 
   </div>
-
+<hr>
+<!-- About Us Section Start -->
+<section id="about" style="padding: 60px 20px;">
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px;    font-family: unset;">Chief Engineer <img src="engi.jpg" style="width: 50px;margin-top: -10px;"/></h2>
+	
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #333;">
+      At our core, we believe in building a stronger future with innovation and integrity. Our team is led by <strong style="color: goldenrod;">Mr. Arun S</strong>, a highly skilled Structural Engineer with over <strong>6 years of hands-on experience</strong> in civil and structural design.
+    </p>
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #333;">
+      Arun holds an <strong>M.Tech in Structural Engineering</strong> and has played a key role in designing high-rise RCC and composite buildings across major projects including <em>Cyberthum Noida</em>, <em>Max Estate Gurgaon</em>, and several government infrastructures like <em>DMRC Simulator Building</em> and <em>AIIMS extensions</em>.
+    </p>
+    <p style="font-size: 1.1rem; line-height: 1.7; color: #333;">
+      He is an expert in advanced design tools like <strong>CSI ETABS, SAFE, AutoCAD, and STAAD Pro</strong>, ensuring all projects meet the highest safety and efficiency standards. With a creative mindset and a problem-solving approach, he continues to lead our engineering vision with passion and precision.
+    </p>
+  </div>
+</section>
+<!-- About Us Section End -->
 
 
     <!-- About Us Start -->
@@ -1244,24 +1345,10 @@ Now manage your Hilti tools or book tool's repair online
 }
 </style>
 							
-							
-							
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .footer {
             background-color: #533dea;
@@ -1301,13 +1388,17 @@ Now manage your Hilti tools or book tool's repair online
         }
 		
     </style>
+</head>
+<body>
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
-                        <h5>Products</h5>
+                        <h5 STYLE="color: white;">Products</h5>
                         <ul>
                             <li><a href="#">Engineering</a></li>
                             <li><a href="#">Business Optimization</a></li>
@@ -1318,7 +1409,7 @@ Now manage your Hilti tools or book tool's repair online
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
-                        <h5>Legal</h5>
+                        <h5 STYLE="color: white;">Legal</h5>
                         <ul>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms & Conditions of Sale</a></li>
@@ -1330,7 +1421,7 @@ Now manage your Hilti tools or book tool's repair online
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
-                        <h5>Resources</h5>
+                        <h5 STYLE="color: white;">Resources</h5>
                         <ul>
                             <li><a href="#">SpeakUp for Business Partners</a></li>
                             <li><a href="#">Supplier information</a></li>
@@ -1341,7 +1432,7 @@ Now manage your Hilti tools or book tool's repair online
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
-                        <h5>About  Tool with Tricks</h5>
+                        <h5 STYLE="color: white;">About  Tool with Tricks</h5>
                         <p> Tool with Tricks India Private Limited is the exclusive importer and distributor in India of all Hilti products manufactured all over the World to the exclusion of all.</p>
                         <div class="social-links mt-3">
                             <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
@@ -1369,3 +1460,5 @@ Now manage your Hilti tools or book tool's repair online
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
