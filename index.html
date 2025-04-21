@@ -197,6 +197,7 @@
 		.top_me {
 		  display: none;
 		}
+		
 	  }
    </style>
    <body>
@@ -1192,7 +1193,7 @@ Now manage your Hilti tools or book tool's repair online
 <!-- About Us Section Start -->
 <section id="about" style="padding: 60px 20px;">
   <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px;    font-family: unset;">Chief Engineer <img src="engi.jpg" style="width: 50px;margin-top: -10px;"/></h2>
+    <h2 class="engi">Chief Engineer <img src="engi.jpg" style="width: 50px;margin-top: -10px;"/></h2>
 	
     <p style="font-size: 1.1rem; line-height: 1.7; color: #333;">
       At our core, we believe in building a stronger future with innovation and integrity. Our team is led by <strong style="color: goldenrod;">Mr. Arun S</strong>, a highly skilled Structural Engineer with over <strong>6 years of hands-on experience</strong> in civil and structural design.
@@ -1239,7 +1240,13 @@ Now manage your Hilti tools or book tool's repair online
     <!-- About Us End -->
 
 <style>
+.engi{font-size: 2.5rem; margin-bottom: 20px;    font-family: unset;}
 
+  @media (max-width: 600px) {
+    .engi {
+      font-size: 2.2rem;
+    }
+  }
  .abot{width: 350px;display: block;margin: auto;}
 
  
